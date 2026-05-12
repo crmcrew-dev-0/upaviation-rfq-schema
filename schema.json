@@ -5,8 +5,28 @@
     "isRFQ": {
       "type": "boolean",
       "description": "Indicates whether the request is an RFQ"
+    },
+    "partNumbers": {
+      "type": "array",
+      "description": "List of part numbers with quantities",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Part number name or identifier"
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Quantity required"
+          }
+        },
+        "required": ["name", "quantity"],
+        "additionalProperties": false
+      }
     }
   },
-  "required": ["isRFQ"],
+  "required": ["isRFQ", "partNumbers"],
   "additionalProperties": false
 }

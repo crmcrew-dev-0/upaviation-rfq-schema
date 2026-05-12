@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "isRFQ": {
+      "type": "boolean",
+      "description": "Indicates whether the request is an RFQ"
+    }
+  },
+  "required": ["isRFQ"],
+  "additionalProperties": false
+}

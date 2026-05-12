@@ -3,23 +3,19 @@
   "type": "object",
   "properties": {
     "isRFQ": {
-      "type": "boolean",
-      "description": "Indicates whether the request is an RFQ"
+      "type": "boolean"
     },
     "partNumbers": {
       "type": "array",
-      "description": "List of part numbers with quantities",
       "items": {
         "type": "object",
         "properties": {
           "name": {
-            "type": "string",
-            "description": "Part number name or identifier"
+            "type": ["string", "null"]
           },
           "quantity": {
-            "type": "integer",
-            "minimum": 1,
-            "description": "Quantity required"
+            "type": ["integer", "null"],
+            "minimum": 1
           }
         },
         "required": ["name", "quantity"],
